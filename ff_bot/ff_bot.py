@@ -1,6 +1,5 @@
 import requests
 import json
-import os
 
 from espnff import League
 
@@ -45,9 +44,9 @@ def get_scoreboard(league_id, year):
 
 
 def main():
-    bot_id = os.environ["BOT_ID"]
-    league_id = os.environ["LEAGUE_ID"]
-    year = os.environ["LEAGUE_YEAR"]
+    bot_id = '247275ec92ee428dd3348d30bc'
+    league_id = 856245
+    year = 2016
     bot = GroupMeBot(bot_id)
     text = get_scoreboard(league_id, year)
     bot.send_message(text)
